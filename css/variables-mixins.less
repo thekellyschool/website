@@ -1,0 +1,37 @@
+@headline_font: 'brandon-grotesque', sans-serif;
+@body_font: 'baskerville-urw', serif;
+@base_font_size: 1.725rem;
+
+/* media query variables */
+@xLarge : ~"only screen and (min-width: 1600px)";
+@large  : ~"only screen and (max-width: 1200px)";
+@mediumUp : ~"only screen and (min-width: 992px)";
+@medium : ~"only screen and (max-width: 991px)";
+@smallUp  : ~"only screen and (min-width: 761px)";
+@small  : ~"only screen and (max-width: 760px)";
+@tiny   : ~"only screen and (max-width: 480px)";
+
+/* colors */
+@black: #000000;
+@white: #ffffff;
+@lightGray: #ececec;
+@darkGray: #464646;
+@pink: #d98787;
+
+/* aspect ratio containers */
+.aspect-ratio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
