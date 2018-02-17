@@ -3,7 +3,7 @@ set -e
 
 # We can run this every minute. It's cheap and safe.
 # crontab -e
-# * * * * * pullme.sh >/dev/null 2>&1
+# * * * * * /home/ubuntu/website/bin/pullme.sh >/dev/null 2>&1
 
 # Make sure we are in the right directory.
 MY_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
