@@ -128,7 +128,7 @@ html {
   color: #464646;
 }
 body {
-  font-size: 1.725rem;
+  font-size: 2.2rem;
   font-family: 'baskerville-urw', serif;
   font-weight: 500;
   line-height: 1.9;
@@ -682,4 +682,3 @@ a {
     page-break-after: avoid;
   }
 }
-/*# sourceMappingURL=main.css.map */
