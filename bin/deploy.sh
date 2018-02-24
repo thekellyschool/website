@@ -10,13 +10,13 @@ cd ..
 # Sync with S3
 aws s3 sync \
   ./ \
-  s3://thekellyschool/toocool \
+  s3://thekellyschool/website \
   --exclude=.git/** \
   --exclude=bin/** \
   --exclude=README.md
 
 # Tell CloudFront that there are new files on S3 to fetch.
 aws cloudfront create-invalidation \
-  --distribution-id E1UVEVWIZ244PD \
+  --distribution-id E2HT5RYWP92IC4 \
   --paths '/*'
 
