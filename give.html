@@ -68,7 +68,43 @@
                   </div>
                   <div class="col-md-7">
                     <h2>Donate</h2>
-                    <p>From Him and to Him are all things (Romans 11:36). The Kelly School seeks to put Christ first in everything. We truly believe the fear of the Lord is the beginning of wisdom (Proverbs 9:10), and the fear of the Lord is the beginning of knowledge (Proverbs 1:7). All subjects are taught from a biblical worldview.</p>
+                    <p>Donate to our annual fund to give kids the chance to succeed</p>
+                    curl https://api.stripe.com/v1/checkout/sessions \
+                    -u sk_test_TH6BoOUG5VTz2UWa5GyspEEF00lUaP51P2: \
+                    -d "payment_method_types[]"=card \
+                    -d "line_items[][name]"=T-shirt \
+                    -d "line_items[][description]"="Comfortable cotton t-shirt" \
+                    -d "line_items[][images][]"="https://example.com/t-shirt.png" \
+                    -d "line_items[][amount]"=500 \
+                    -d "line_items[][currency]"=usd \
+                    -d "line_items[][quantity]"=1 \
+                    -d success_url="https://example.com/success?session_id={CHECKOUT_SESSION_ID}" \
+                    -d cancel_url="https://example.com/cancel"
+                    curl https://api.stripe.com/v1/checkout/sessions \
+  -u sk_test_TH6BoOUG5VTz2UWa5GyspEEF00lUaP51P2: \
+  -d customer=cus_123 \
+  -d "payment_method_types[]"=card \
+  -d "line_items[][name]"=T-shirt \
+  -d "line_items[][description]"="Comfortable cotton t-shirt" \
+  -d "line_items[][images][]"="https://example.com/t-shirt.png" \
+  -d "line_items[][amount]"=500 \
+  -d "line_items[][currency]"=usd \
+  -d "line_items[][quantity]"=1 \
+  -d success_url="https://example.com/success" \
+  -d cancel_url="https://example.com/cancel"
+  <script src="https://js.stripe.com/v3/"></script>
+  var stripe = Stripe('pk_test_M8uI0j5zibuWxv4vo1xZvv8d000wnsTF0c');
+  stripe.redirectToCheckout({
+    // Make the id field from the Checkout Session creation API response
+    // available to this file, so you can provide it as parameter here
+    // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+    sessionId: '{{CHECKOUT_SESSION_ID}}'
+  }).then(function (result) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `result.error.message`.
+  });
+                    
                   </div>
                 </div>
               </div>
