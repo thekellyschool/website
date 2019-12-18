@@ -24,7 +24,7 @@
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
-    });
+    })}
   });
 })();
 (function() {
@@ -52,7 +52,7 @@
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
-    });
+    })};
   });
 })();
 </script>
