@@ -1,16 +1,5 @@
-<!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-sku_GNn0CpLfe6sPzk"
-  role="link"
->
-  Checkout
-</button>
 
-<div id="error-message"></div>
 
 <script>
 (function() {
