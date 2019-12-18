@@ -1,4 +1,3 @@
-<script src="https://js.stripe.com/v3"></script>
 <script>
 (function() {
   var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
@@ -28,8 +27,6 @@
     });
   });
 })();
-</script>
-<script>
 (function() {
   var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
 
