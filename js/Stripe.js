@@ -1,6 +1,6 @@
 <script>
 (function() {
-  var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+  var stripe = Stripe('pk_test_M8uI0j5zibuWxv4vo1xZvv8d000wnsTF0c');
 
   var checkoutButton = document.getElementById('checkout-button-sku_GNn0CpLfe6sPzk');
   checkoutButton.addEventListener('click', function () {
@@ -28,7 +28,7 @@
   });
 })();
 (function() {
-  var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+  var stripe = Stripe('pk_test_M8uI0j5zibuWxv4vo1xZvv8d000wnsTF0c');
 
   var checkoutButton = document.getElementById('checkout-button-sku_GNn19uy9ZUkAvQ');
   checkoutButton.addEventListener('click', function () {
