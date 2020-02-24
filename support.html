@@ -1,0 +1,299 @@
+<!doctype html>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="Stripe.js"></script>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Kelly School</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/dbc6ewx.css">
+    <script src="https://use.fontawesome.com/ce0d93e993.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body class="index nav-closed">
+    <div id="main">
+    	<header class="main-header">
+      	<div class="container">
+      		<a href="/" class="logo">The Kelly School</a>
+      		<button class="nav-button nav-closed">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+      	</div>
+    	</header>
+    	<div class="nav-overlay"></div>
+    	<div class="nav-wrap nav-closed">
+      	<div class="container">
+        	<nav class="nav-primary">
+	        	<ul>
+		        	<li><a href="index.html">Home</a></li>
+		        	<li><a href="about.html">About</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="support.html" class="active">Support</a></li>
+              <li><a href="contact.html">Contact</a></li>
+	        	</ul>
+        	</nav>
+      	</div>
+    	</div>
+    	<section class="feature banner top parallax-window" data-parallax="scroll"
+      data-image-src="img/about-sm.jpg">
+      	<div class="container">
+					<div class="row row align-items-center">
+						<div class="col-md">
+							<p>Elizabethtown, PA</p>
+							<h1>K-12 Christian School</h1>
+						</div>
+					</div>
+      	</div>
+    	</section>
+    	<section class="main-content">
+      	<div class="container">
+	      	<div class="row justify-content-center">
+		      	<div class="col-md-10">
+			      	<div class="content-module quote">
+								<blockquote class="blockquote">
+                  <h1>Ways to support students like Marcos</h1>
+                  <p>Marcos was four grades behind and behaviorally irratic, now he's a character example to his classmates and ready to CLEP classes thanks to scholarship donors and volunteers.</p>
+								</blockquote>
+			      	</div>
+              <div class="content-module content-img-left">
+                <div class="row">
+                  <div class="col-md-5">
+                <p></p>
+                <p></p>
+                <p></p>
+                    <!-- //$5 button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+style="background-color:#feaa3a;color:rgb(0, 0, 0);padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+id="checkout-button-sku_GNn0CpLfe6sPzk"
+role="link"
+>
+Donate $5
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+
+var checkoutButton = document.getElementById('checkout-button-sku_GNn0CpLfe6sPzk');
+checkoutButton.addEventListener('click', function () {
+  // When the customer clicks on the button, redirect
+  // them to Checkout.
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_GNn0CpLfe6sPzk', quantity: 1}],
+
+    // Do not rely on the redirect to the successUrl for fulfilling
+    // purchases, customers may not always reach the success_url after
+    // a successful payment.
+    // Instead use one of the strategies described in
+    // https://stripe.com/docs/payments/checkout/fulfillment
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
+  })
+  .then(function (result) {
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer.
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+});
+})();
+</script>  
+
+<!-- $20 button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+style="background-color:#feaa3a;color:rgb(0, 0, 0);padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+id="checkout-button-sku_GNn19uy9ZUkAvQ"
+role="link"
+>
+Donate $20
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+
+var checkoutButton = document.getElementById('checkout-button-sku_GNn19uy9ZUkAvQ');
+checkoutButton.addEventListener('click', function () {
+  // When the customer clicks on the button, redirect
+  // them to Checkout.
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_GNn19uy9ZUkAvQ', quantity: 1}],
+
+    // Do not rely on the redirect to the successUrl for fulfilling
+    // purchases, customers may not always reach the success_url after
+    // a successful payment.
+    // Instead use one of the strategies described in
+    // https://stripe.com/docs/payments/checkout/fulfillment
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
+  })
+  .then(function (result) {
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer.
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+});
+})();
+</script> 
+
+<!-- $50 button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+style="background-color:#feaa3a;columns: #000000;;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+id="checkout-button-sku_GNn2Cv4R9ewiwD"
+role="link"
+>
+Donate $50
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+
+var checkoutButton = document.getElementById('checkout-button-sku_GNn2Cv4R9ewiwD');
+checkoutButton.addEventListener('click', function () {
+  // When the customer clicks on the button, redirect
+  // them to Checkout.
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_GNn2Cv4R9ewiwD', quantity: 1}],
+
+    // Do not rely on the redirect to the successUrl for fulfilling
+    // purchases, customers may not always reach the success_url after
+    // a successful payment.
+    // Instead use one of the strategies described in
+    // https://stripe.com/docs/payments/checkout/fulfillment
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
+  })
+  .then(function (result) {
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer.
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+});
+})();
+</script> 
+
+
+<!-- $100 Button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+style="background-color:#feaa3a;color:#000;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+id="checkout-button-sku_GNn28UjpBqYP5k"
+role="link"
+>
+Donate $100
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+
+var checkoutButton = document.getElementById('checkout-button-sku_GNn28UjpBqYP5k');
+checkoutButton.addEventListener('click', function () {
+  // When the customer clicks on the button, redirect
+  // them to Checkout.
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_GNn28UjpBqYP5k', quantity: 1}],
+
+    // Do not rely on the redirect to the successUrl for fulfilling
+    // purchases, customers may not always reach the success_url after
+    // a successful payment.
+    // Instead use one of the strategies described in
+    // https://stripe.com/docs/payments/checkout/fulfillment
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
+  })
+  .then(function (result) {
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer.
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+});
+})();
+</script>                
+
+                  </div>
+                  <div class="col-md-7">
+                    <h2 >Donate</h2 >
+                    <p>Tax deductible donations can be mailed to: The Kelly School, PO Box 69, Elizabethtown, PA 17022</p> 
+                      <p>For credit card donations, click on the links to the left (a 2.2%-3.5% + 30¢ service fee applies)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="content-module content-img-right">
+                <div class="row">
+                  <div class="col-md-7">
+                    <h2>EITC: Fund scholarships instead of paying PA taxes</h2>
+                    <p>It’s true! Businesses that donate scholarships to The Kelly School can receive a 75-90% PA tax credit through the EITC program.</p><p>See more <a href="pdf\EITC Info Letter.pdf" target="_blank">here</a> or contact Mary Dodds, director of operations, at info@thekellyschool.com, (717) 489-2590.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="img/EITC.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="content-module content-img-left">
+                <div class="row">
+                  <div class="col-md-5">
+                    <img src="img/FieldTrip.jpg">
+                  </div>
+                  <div class="col-md-7">
+                    <h2>Volunteer, Field Trips, & Job Shadows</h2>
+                    <p>Elementary students do a field trip every month. Middle and High School students have field trips plus school choice week each semester when students choose what they study from service dogs to job shadowing a judge.</p><p>Have a field trip opportunity, a workshop to teach, or a job to shadow? Shoot us a line at info@thekellyschool.com</a>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="content-module content-img-right">
+                <div class="row">
+                  <div class="col-md-7">
+                    <h2>In-Kind Gifts</h2>
+                    <p>Want to donate office or school supplies, furniature or electronics? Please see our <a href="http://a.co/blgw8R0" target="_blank">wish list</a> or send us an email at info@thekellyschool.com to let us know what you have.</p>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="img/InKInd.jpg">
+                  </div>
+                </div>
+              </div>
+           	</div>
+	      	</div>
+         </section> 
+
+          <footer class="main-footer">
+            <div class="container">
+              <p>The Kelly School does not discriminate on the basis of color, nationality, ethnic origin, or socio-economic factors. While students and families are not required to hold to the same belief in God, all subjects will be taught from a biblical worldview. Students and parents must acknowledge this. Respect of one another is required.</p>
+            </div>
+          </footer>
+    </div>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/vendor/parallax.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
