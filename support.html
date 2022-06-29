@@ -69,13 +69,56 @@
                 <p></p>
                 <p></p>
                 <p></p>
+
+                <!-- //$5 button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+style="background-color:#feaa3a;color:rgb(0, 0, 0);padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+id="checkout-button-sku_GNn0CpLfe6sPzk"
+role="link"
+>
+Donate $10
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+var stripe = Stripe('pk_live_Oo87SuZtCdoTr1K0dM5j0P64000lqVFPt2');
+
+var checkoutButton = document.getElementById('checkout-button-sku_GNn0CpLfe6sPzk');
+checkoutButton.addEventListener('click', function () {
+  // When the customer clicks on the button, redirect
+  // them to Checkout.
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_JdMpg4YPrhv0Fy', quantity: 1}],
+
+    // Do not rely on the redirect to the successUrl for fulfilling
+    // purchases, customers may not always reach the success_url after
+    // a successful payment.
+    // Instead use one of the strategies described in
+    // https://stripe.com/docs/payments/checkout/fulfillment
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou.html',
+    cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
+  })
+  .then(function (result) {
+    if (result.error) {
+      // If `redirectToCheckout` fails due to a browser or network
+      // error, display the localized error message to your customer.
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+});
+})();
+</script>  
+
                     <!-- //$5 button Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
 style="background-color:#feaa3a;color:rgb(0, 0, 0);padding:8px 12px;border:0;border-radius:4px;font-size:1em"
 id="checkout-button-sku_GNn0CpLfe6sPzk"
 role="link"
 >
-Donate $5
+Donate $20
 </button>
 
 <div id="error-message"></div>
@@ -96,7 +139,7 @@ checkoutButton.addEventListener('click', function () {
     // a successful payment.
     // Instead use one of the strategies described in
     // https://stripe.com/docs/payments/checkout/fulfillment
-    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou.html',
     cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
   })
   .then(function (result) {
@@ -117,7 +160,7 @@ style="background-color:#feaa3a;color:rgb(0, 0, 0);padding:8px 12px;border:0;bor
 id="checkout-button-sku_GNn19uy9ZUkAvQ"
 role="link"
 >
-Donate $20
+Donate $100
 </button>
 
 <div id="error-message"></div>
@@ -138,7 +181,7 @@ checkoutButton.addEventListener('click', function () {
     // a successful payment.
     // Instead use one of the strategies described in
     // https://stripe.com/docs/payments/checkout/fulfillment
-    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou.html',
     cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
   })
   .then(function (result) {
@@ -159,7 +202,7 @@ style="background-color:#feaa3a;columns: #000000;;padding:8px 12px;border:0;bord
 id="checkout-button-sku_GNn2Cv4R9ewiwD"
 role="link"
 >
-Donate $50
+Donate $250
 </button>
 
 <div id="error-message"></div>
@@ -180,7 +223,7 @@ checkoutButton.addEventListener('click', function () {
     // a successful payment.
     // Instead use one of the strategies described in
     // https://stripe.com/docs/payments/checkout/fulfillment
-    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou.html',
     cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
   })
   .then(function (result) {
@@ -202,7 +245,7 @@ style="background-color:#feaa3a;color:#000;padding:8px 12px;border:0;border-radi
 id="checkout-button-sku_GNn28UjpBqYP5k"
 role="link"
 >
-Donate $100
+Donate $500
 </button>
 
 <div id="error-message"></div>
@@ -223,7 +266,7 @@ checkoutButton.addEventListener('click', function () {
     // a successful payment.
     // Instead use one of the strategies described in
     // https://stripe.com/docs/payments/checkout/fulfillment
-    successUrl: window.location.protocol + '//thekellyschool.com/thankyou',
+    successUrl: window.location.protocol + '//thekellyschool.com/thankyou.html',
     cancelUrl: window.location.protocol + '//thekellyschool.com/canceled',
   })
   .then(function (result) {
@@ -242,7 +285,7 @@ checkoutButton.addEventListener('click', function () {
                   <div class="col-md-7">
                     <h2 >Donate</h2 >
                     <p>Tax deductible donations can be mailed to: The Kelly School, PO Box 69, Elizabethtown, PA 17022</p> 
-                      <p>For credit card donations, click on the links to the left (a 2.2%-3.5% + 30¢ service fee applies)</p>
+                      <p>For credit card donations, click on the links to the left (a 2.2%-3.5% + 30¢ service fee applies). For any other donation amounts, please mail a check.</p>
                   </div>
                 </div>
               </div>
